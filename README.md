@@ -1,10 +1,6 @@
 ## Movie Scheduling in a Multiplex
 
-This website was developed as the graded project for the UCS2201 - Fundamentals and Practice of Software Development course.
-
-The timetabling solution is a modular program that is built on Python+Django framework. Python was chosen because of its support for garbage collection, automatic memory management, but most importantly, for the way it handles scripts.
-
-The solution implemented is a computationally intensive bruteforce method. We have built a clean and easy-to-use user interface in the form of a web application, made possible using the Django framework.
+Developed a web application using python (Django framework) to schedule movies in the various screens of a multiplex for profit maximization. The application takes in real-time data from Google Trends to generate normalized interest scores for the movies which proportionately sets the limit for its number of screenings. It also takes into account the no. of available screens of each format (Dolby Atmos/3D/IMAX) and maps the movies to compatible screens.
 
 A project developed by team Power 3 - C B Ananya, Alamelu Kannan, Adithya Muthukumar.
 
