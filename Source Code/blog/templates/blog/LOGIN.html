@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #000000;
+  padding:5px;
+  gap :20px;
+}
+.grid-item {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.item1 {
+  grid-column: 1 / span 3;
+  grid-row:1 ;
+  text-align: center;
+  font-size: 25px;
+}
+
+.item2{
+	grid-column:3;
+    grid-row:2 /span 9;
+}
+.item3{
+	grid-column:1/span 2;
+    grid-row:2 /span 9;
+}
+input[type=submit] {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+input[type=text],input[type=number],input[type=date],input[type=password] {
+  width: 75%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+select {
+  width: 75%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+    {% if messages %}
+            
+    {% for message in messages %}
+      <h3 {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</h3>
+      {% endfor %}
+   
+    {% endif %}
+    <div class="grid-container">
+        <div class="grid-item item1"><h1>MULTIPLEX TIMETABLE SCHEDULING APPLICATION</h1></div>
+    <div class="grid-item item2">
+        <h3>Log-In</h3>
+        <form method="post">
+            {% csrf_token %} 
+            <label for="Username">Username :</label>
+            <input type="text" name="username" required>
+            <br>
+            <label for="password">Password :</label>
+            <input type="password" name="password" required>
+            <br>
+            <input type="submit" value="SUBMIT">
+            <br>
+            <label>To Create new account :<a href='/signup'> Click Here </a></label>
+            
+        </form>
+
+    </div>
+    <div class="grid-item item3">
+        <h3>TIMETABLE SCHEDULING SYSTEM FOR A MULTIPLEX</h3>
+        <P>DATA</P>
+        <P>DATA</P>
+        <P>DATA</P>
+    </div>
+</div>
+
+</body>
+</html>
